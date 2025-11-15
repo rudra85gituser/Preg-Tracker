@@ -14,8 +14,8 @@ export default function RootLayout() {
       <Stack.Screen name="(tabs)" />
 
 
-      {/* Home page outside tabs 
-      <Stack.Screen name="index" /> */}
+      {/* Home page outside tabs */}
+      <Stack.Screen name="index" /> 
       
 
       {/* Auth pages */}

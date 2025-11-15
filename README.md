@@ -1,50 +1,204 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 🤰 Pregnancy Tracker – React Native Expo App
 
-## Get started
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Setup Instructions
 
-2. Start the app
+### 1️⃣ Create a New Expo App (optional)
+```bash
+npx create-expo-app@latest
+````
 
-   ```bash
-   npx expo start
-   ```
+### 2️⃣ Move into the Project Directory
 
-In the output, you'll find options to open the app in a
+```bash
+cd PragnencyTracker
+```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 3️⃣ Install All Dependencies
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+```bash
+npm install
+```
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## ⚙️ Install Required Libraries
+
+### 📌 NativeWind + TailwindCSS
+
+```bash
+npm install nativewind
+npm install tailwindcss
+npm install react-native-reanimated
+```
+
+Initialize Tailwind:
+
+```bash
+npx tailwindcss init
+```
+
+---
+
+### 📌 Expo Router
+
+```bash
+npx expo install expo-router
+```
+
+---
+
+### 📌 Safe Area Context
+
+```bash
+npx expo install react-native-safe-area-context
+```
+
+---
+
+### 📌 Gesture Handler
+
+```bash
+npx expo install react-native-gesture-handler
+```
+
+---
+
+### 📌 Expo Utilities
+
+```bash
+npx expo install expo-splash-screen
+npx expo install expo-status-bar
+```
+
+---
+
+### 📌 Audio & Video Support (Required for your video player)
+
+```bash
+npx expo install expo-av
+```
+
+---
+
+### 📌 Emoji Support (For Mood Tracker / Custom Moods)
+
+```bash
+npm install emoji-datasource
+# or
+npm install react-native-emoji
+```
+
+---
+
+## ▶️ Start the App
+
+```bash
+npx expo start
+```
+
+You can open it via:
+
+* 📱 Android Emulator
+* 🍎 iOS Simulator
+* 📲 Expo Go
+* 🛠️ Development Build
+
+---
+
+## 📦 Project Features
+
+* 🔐 Authentication (Signup/Login)
+
+* 🏠 Home Dashboard with all cards
+
+* 🍼 Baby Size Tracking
+
+* ❤️ Mood Tracker
+
+* 📅 Upcoming Appointment
+
+* 🧘 Garbha Sanskar Activities
+
+* 📝 Pregnancy Tips
+
+* 🤒 Symptom Tracker
+
+* 📘 Weekly FAQ
+
+* 🎥 Video Library (YouTube Player using `expo-av`)
+
+* ⭐ Testimonials
+
+* 🛍️ Shop Links
+
+* 🎒 Mama’s Kit Tools:
+
+  * Due Date Calculator
+  * Pregnancy Journal
+  * Baby Kick Counter
+  * Food Tracking
+  * Water Intake
+  * Daily Activities
+  * Travel Checklist
+  * Baby Name List
+
+* 🤖 AI Chat Assistant (custom UI)
+
+---
+
+## 🗂 Folder Structure
+
+```
+PragnencyTracker
+│── app/                # Screens (Expo Router)
+│── components/         # UI components
+│── constants/          # Static data, images
+│── assets/             # Icons, images
+│── types/              # Image type declarations
+│── tailwind.config.js
+│── babel.config.js
+│── metro.config.js
+│── package.json
+```
+
+---
+
+## 🧩 Recommended VS Code Extensions
+
+```bash
+# React Native Tools
+code --install-extension msjsdiag.vscode-react-native
+
+# React / JSX Helpers
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension formulahendry.auto-close-tag
+code --install-extension formulahendry.auto-rename-tag
+
+```
+
+---
+
+## 🧼 Reset Project (Optional)
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📚 Learn More
 
-To learn more about developing your project with Expo, look at the following resources:
+* Expo Docs → [https://docs.expo.dev](https://docs.expo.dev)
+* NativeWind Docs → [https://www.nativewind.dev](https://www.nativewind.dev)
+* React Native Docs → [https://reactnative.dev](https://reactnative.dev)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+

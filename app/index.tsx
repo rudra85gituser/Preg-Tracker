@@ -7,10 +7,10 @@ import { useRouter } from "expo-router";
 
 // Importing all components (must be default exports)
 import BabySizeCard from "@/app/babySizeCard";
-import UpcomingAppointment from "@/app/upcomingAppointment";
+import { UpcomingAppointment } from "@/app/upcomingAppointment";
 import PlansCardHomeScreen from "@/app/plansCardHomeScreen";
 import GarbhaSanskarCard from "@/app/garbhaSanskarCard";
-import HelpfulTipsCard from "@/app/helpfulTipsCard";
+import {HelpfulTipsCard} from "@/app/helpfulTipsCard";
 import MoodTracker from "@/app/moodTracker";
 import PregnancyTipCard from "@/app/pregnancyTipCard";
 import HomeScreenSymptom from "@/app/homeScreenSymptom";
