@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { View, Text, TouchableOpacity, ScrollView, SafeAreaView, TextInput } from "react-native"
+import { View, Text, TouchableOpacity, ScrollView, TextInput } from "react-native"
 import { useRouter } from "expo-router"
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
 
@@ -16,7 +17,7 @@ export default function OnboardingMonth() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f3e5f5" }}>
+    <SafeAreaProvider>
       <ScrollView
         contentContainerStyle={{ flexGrow: 1, justifyContent: "center", paddingHorizontal: 20, paddingVertical: 40 }}
         showsVerticalScrollIndicator={false}
@@ -86,6 +87,6 @@ export default function OnboardingMonth() {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

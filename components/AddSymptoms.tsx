@@ -8,7 +8,7 @@ import {
   TextInput,
   Image,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useState } from "react";
 import { symptoms as symptomImages } from "@/constants/symptoms"; // ✅ Import all images
 
@@ -67,7 +67,7 @@ export default function AddSymptoms({ onClose, onSave }: AddSymptomsProps) {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#ffffff" }}>
+    <SafeAreaProvider>
       {/* Header */}
       <View
         style={{
@@ -197,6 +197,6 @@ export default function AddSymptoms({ onClose, onSave }: AddSymptomsProps) {
           />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

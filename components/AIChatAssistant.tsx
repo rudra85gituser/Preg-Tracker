@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { View, Text, ScrollView, Pressable, Image, TextInput, KeyboardAvoidingView, Platform } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 import { useRouter } from "expo-router"
 import { aiChatAssistant } from "@/constants/aiChatAssistant"
 
@@ -90,7 +90,7 @@ export default function AIChatAssistant() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
       {/* Header */}
       <View
         style={{
@@ -236,6 +236,6 @@ export default function AIChatAssistant() {
           </Pressable>
         </View>
       </KeyboardAvoidingView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

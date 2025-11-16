@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 import VideoCard from "../../components/VideoCard";
 
 const videoData = [
-  { id: "1", title: "5th Week of Pregnancy", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+  { id: "1", title: "5th Week of Pregnancy", url: "https://www.youtube.com/watch?v=G1hKzCkywM8" }
 ];
 
 export default function VideoList() {
@@ -16,7 +16,7 @@ export default function VideoList() {
         <Text style={styles.title}>YouTube Videos</Text>
 
         <Pressable onPress={() => router.push("/videoCard/allVideos")}>
-          <Text style={styles.link}>View All</Text>
+          <Text style={styles.viewAll}>View All</Text>
         </Pressable>
       </View>
 
@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   title: { fontSize: 18, fontWeight: "600" },
-  link: { color: "#1D9BF0", fontWeight: "500" },
+  viewAll: { fontSize: 14, color: "#666", textDecorationLine: "underline", },
   card: { marginBottom: 16 },
 });

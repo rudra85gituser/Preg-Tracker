@@ -6,6 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 
 // Importing all components (must be default exports)
+import Header from "@/app/header";
 import BabySizeCard from "@/app/babySizeCard";
 import UpcomingAppointment  from "@/app/upcomingAppointment";
 import PlansCardHomeScreen from "@/app/plansCardHomeScreen";
@@ -20,6 +21,8 @@ import VideoCard from "@/app/videoCard";
 import Testimonials from "@/app/testimonials";
 import ShopLinks from "@/app/shopLinks";
 
+
+
 export default function HomeScreen() {
   const router = useRouter();
 
@@ -28,14 +31,18 @@ export default function HomeScreen() {
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
-          paddingHorizontal: 5,
+          paddingHorizontal: 2,
           paddingBottom: 100, // space for bottom buttons + tab menu
         }}
         showsVerticalScrollIndicator={false}
       >
 
-
+        
         {/* Header */}
+        <Header />
+
+
+        
         <View
           style={{
             alignItems: "center",
@@ -54,7 +61,7 @@ export default function HomeScreen() {
             Pregnancy Tracker
           </Text>
           <Text style={{ fontSize: 16, color: "#20094D" }}>
-            Track your pregnancy journey
+            Track your pragnancy journey
           </Text>
         </View>
 
@@ -112,6 +119,7 @@ export default function HomeScreen() {
               paddingVertical: 16,
               borderRadius: 12,
               alignItems: "center",
+              marginBottom: 14
             }}
             onPress={() => router.push("/symptoms")}
           >

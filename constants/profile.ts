@@ -13,6 +13,7 @@ import contactUs from "@/assets/profile/contact-us.png";
 import settings from "@/assets/profile/settings.png";
 import deleteAccount from "@/assets/profile/delete-account.png";
 import logOut from "@/assets/profile/log-out.png";
+import homeProfileImage from "@/assets/profile/home-profile-image.png";
 
 export const profile = {
   profileImage,
@@ -29,6 +30,6 @@ export const profile = {
   contactUs,
   settings,
   deleteAccount,
-  logOut
-    
+  logOut,
+  homeProfileImage
 }

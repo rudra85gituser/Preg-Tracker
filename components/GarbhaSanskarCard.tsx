@@ -7,7 +7,7 @@ import {
   Image,
   FlatList,
 } from 'react-native';
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { CATEGORIES, SAMPLE_ACTIVITIES } from '../constants/garbhaSanskar';
 
 interface ActivityItem {
@@ -76,7 +76,7 @@ export default function GarbhaSanskarCard({
   );
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaProvider style={{ flex: 1 }}>
       <ScrollView >
         <View style={{ backgroundColor, margin: 16, borderRadius: 16, padding: 16 }}>
           <View style={{ marginBottom: 20 }}>
@@ -125,6 +125,6 @@ export default function GarbhaSanskarCard({
           />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

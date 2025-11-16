@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { SafeAreaView } from "react-native-safe-area-context"
+
 
 interface FAQItem {
   id: string;
@@ -39,7 +39,7 @@ export default function WeeklyFAQ({
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F5EFFF' }}>
+  
       <ScrollView style={{ flex: 1, paddingHorizontal: 16 }}>
         {/* Title */}
         <Text
@@ -142,6 +142,6 @@ export default function WeeklyFAQ({
           ))}
         </View>
       </ScrollView>
-    </SafeAreaView>
+   
   );
 }

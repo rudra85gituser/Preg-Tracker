@@ -5,12 +5,12 @@ import { useRouter } from "expo-router";
 import VideoCard from "../../components/VideoCard";
 
 const videoData = [
-  { id: "1", title: "5th Week of Pregnancy", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-  { id: "2", title: "Pregnancy Nutrition Guide", url: "https://youtu.be/9bZkp7q19f0" },
-  { id: "3", title: "Baby Development Explained", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-  { id: "4", title: "First Trimester Tips", url: "https://youtu.be/9bZkp7q19f0" },
-  { id: "5", title: "Exercise During Pregnancy", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-  { id: "6", title: "Preparing for Labor", url: "https://youtu.be/9bZkp7q19f0" },
+  { id: "1", title: "5th Week of Pregnancy", url: "https://www.youtube.com/watch?v=BHACKCNDMW8&list=RDBHACKCNDMW8&start_radio=1" },
+  { id: "2", title: "Pregnancy Nutrition Guide", url: "https://www.youtube.com/watch?v=G1hKzCkywM8" },
+  { id: "3", title: "Baby Development Explained", url: "https://www.youtube.com/watch?v=YFhwEJosUsU" },
+  { id: "4", title: "First Trimester Tips", url: "https://www.youtube.com/watch?v=linlz7-Pnvw&t=60s" },
+  { id: "5", title: "Exercise During Pregnancy", url: "https://www.youtube.com/watch?v=LXb3EKWsInQ" },
+  { id: "6", title: "Preparing for Labor", url: "http://youtube.com/watch?v=sRWcJrMTtMI" },
 ];
 
 export default function AllVideos() {

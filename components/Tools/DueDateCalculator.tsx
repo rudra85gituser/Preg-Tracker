@@ -1,7 +1,7 @@
 "use client"
 
 import { View, ScrollView, Text, TouchableOpacity, Platform } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 import { useRouter } from "expo-router"
 import DateTimePicker from "@react-native-community/datetimepicker"
 import { useState } from "react"
@@ -57,7 +57,7 @@ export default function DueDateCalculator() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#F6F7FB" }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#F6F7FB" }}>
       {/* Header */}
       <View
         style={{
@@ -254,6 +254,6 @@ export default function DueDateCalculator() {
           <Text style={{ color: "#ffffff", fontSize: 16, fontWeight: "600" }}>Calculate</Text>
         </TouchableOpacity>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

@@ -4,7 +4,7 @@
     "slug": "PragnencyTracker",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/app-logo/batman.png",
+    "icon": "./assets/app-logo/batman1.png",
     "scheme": "pragnencytracker",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -14,21 +14,21 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff",
-        "foregroundImage": "./assets/app-logo/batman.png"
+        "foregroundImage": "./assets/app-logo/batman1.png"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/app-logo/batman.png"
+      "favicon": "./assets/app-logo/batman1.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/app-logo/batman.png",
+          "image": "./assets/app-logo/batman1.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",

@@ -1,7 +1,7 @@
 "use client";
 
 import { View, Text, ScrollView, Pressable, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { plansCardImage } from "@/constants/plans";
 
@@ -146,7 +146,7 @@ const PlanCard = ({ plan }: { plan: PlanData }) => {
 
 export default function Plans() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f0f4f8", paddingVertical: 20 }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#f0f4f8", paddingVertical: 20 }}>
       <View style={{ marginBottom: 24, paddingHorizontal: 16 }}>
         <Text style={{ fontSize: 28, fontWeight: "700", color: "#1f2937", textAlign: "center" }}>
           Unlock All <Text style={{ color: "#8b5cf6" }}>Premium</Text> Features
@@ -163,6 +163,6 @@ export default function Plans() {
           <PlanCard key={plan.name} plan={plan} />
         ))}
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

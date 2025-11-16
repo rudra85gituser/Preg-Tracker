@@ -1,7 +1,7 @@
 "use client"
 
 import { View, ScrollView, Text, TouchableOpacity, Image } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 import { useRouter } from "expo-router"
 import { useState } from "react"
 import { journal } from "@/constants/journal"
@@ -30,7 +30,7 @@ export default function Journal() {
   ])
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
       {/* Header */}
       <View
         style={{
@@ -161,6 +161,6 @@ export default function Journal() {
           </View>
         ))}
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

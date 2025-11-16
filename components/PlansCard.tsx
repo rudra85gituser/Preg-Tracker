@@ -1,6 +1,6 @@
 "use client";
 import { View, Text, ScrollView, Pressable, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { plansCardImage } from "@/constants/plans";
 
@@ -131,7 +131,7 @@ export default function Plans() {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f0f4f8" }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#f0f4f8" }}>
       <View
         style={{
           flexDirection: "row",
@@ -194,6 +194,6 @@ export default function Plans() {
           ))}
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import { helpfulTips } from "@/constants/helpfulTips";
-import { SafeAreaView } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 
 export default function HelpfulTipsCard({
   title = "Take breaks between your daily tasks",
@@ -8,52 +8,41 @@ export default function HelpfulTipsCard({
   title: string;
 }) {
   return (
-    <SafeAreaView>
-    <View style={styles.wrapper}>
-      <View style={styles.card}>
-        {/* Text */}
-        <Text style={styles.title}>{title}</Text>
+    <SafeAreaProvider>
+      <View style={{ paddingHorizontal: 16, paddingVertical: 12 }}>
+        <View style={{
+          backgroundColor: "#20094D",
+          borderRadius: 22,
+          padding: 22,
+          height: 110,
+          width: "95%",
+          overflow: "visible",
+          justifyContent: "center"
+        }}>
+          {/* Text */}
+          <Text style={{
+            color: "#FFFFFF",
+            fontSize: 16,
+            fontWeight: "600",
+            maxWidth: "70%"
+          }}>
+            {title}
+          </Text>
 
-        {/* Image overflowing outside card */}
-        <Image
-          source={helpfulTips.tipsImage}
-          style={styles.image}
-          resizeMode="contain"
-        />
+          {/* Image overflowing outside card */}
+          <Image
+            source={helpfulTips.tipsImage}
+            style={{
+              position: "absolute",
+              right: -60,
+              top: -20,
+              width: 200,
+              height: 190
+            }}
+            resizeMode="contain"
+          />
+        </View>
       </View>
-    </View>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  wrapper: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-
-  card: {
-    backgroundColor: "#20094D",
-    borderRadius: 22,
-    padding: 22,
-    height: 110,
-    width: "95%", // <-- smaller width like Figma
-    overflow: "visible",
-    justifyContent: "center",
-  },
-
-  title: {
-    color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "600",
-    maxWidth: "70%", // so text and image don't collide
-  },
-
-  image: {
-    position: "absolute",
-    right: -60,       // <-- pushes image outside card
-    top: -20,
-    width: 200,
-    height: 190,
-  },
-});

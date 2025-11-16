@@ -1,7 +1,7 @@
 "use client"
 
 import { View, ScrollView, Text, TouchableOpacity, TextInput } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 import { useState } from "react"
 import { useRouter } from "expo-router"
 
@@ -35,7 +35,7 @@ export default function JournalNewEntry() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
       {/* Header */}
       <View
         style={{
@@ -160,6 +160,6 @@ export default function JournalNewEntry() {
           <Text style={{ color: "#fff", fontSize: 16, fontWeight: "600" }}>Save</Text>
         </TouchableOpacity>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

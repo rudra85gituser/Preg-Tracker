@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { View, Text, TouchableOpacity, ScrollView, SafeAreaView, TextInput } from "react-native"
+import { View, Text, TouchableOpacity, ScrollView, TextInput } from "react-native"
 import { useRouter } from "expo-router"
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function OnboardingDate() {
   const router = useRouter()
@@ -17,7 +18,7 @@ export default function OnboardingDate() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f3e5f5" }}>
+    <SafeAreaProvider>
       <ScrollView
         contentContainerStyle={{ flexGrow: 1, justifyContent: "center", paddingHorizontal: 20, paddingVertical: 40 }}
         showsVerticalScrollIndicator={false}
@@ -104,6 +105,6 @@ export default function OnboardingDate() {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

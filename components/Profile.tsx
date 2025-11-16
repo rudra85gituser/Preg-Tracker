@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 import { View, Text, ScrollView, Pressable, Image, ImageSourcePropType } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 import { useRouter } from "expo-router"
 import { profile } from "@/constants/profile"
 
@@ -65,7 +65,7 @@ export default function Profile() {
   )
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f7" , paddingBottom:100 }} edges={["top"]}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#f5f5f7" , paddingBottom:100 }} >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 20 }}>
         {/* Header */}
         <View
@@ -74,7 +74,7 @@ export default function Profile() {
             alignItems: "center",
             justifyContent: "space-between",
             paddingHorizontal: 16,
-            paddingVertical: 12,
+            paddingVertical: 30,
             backgroundColor: "#ffffff",
           }}
         >
@@ -186,6 +186,6 @@ export default function Profile() {
           ))}
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

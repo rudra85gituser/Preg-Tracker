@@ -1,9 +1,12 @@
 "use client";
 
 import { Stack } from "expo-router";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 
 export default function RootLayout() {
   return (
+    <SafeAreaProvider>
     <Stack
       screenOptions={{
         headerShown: false,
@@ -25,9 +28,12 @@ export default function RootLayout() {
       <Stack.Screen name="auth/choose-month" />
       <Stack.Screen name="auth/choose-year" />
 
+      {/* Header */}
+      <Stack.Screen name="header/index" />
+
       {/* Other pages outside tabs */}
       <Stack.Screen name="symptoms/index" />
-      <Stack.Screen name="symptoms/homeScreenSymptom" />
+      <Stack.Screen name="homeScreenSymptom/index" />
       <Stack.Screen name="aiChatAssistant/index" />
       <Stack.Screen name="plansCard/index" />
       <Stack.Screen name="plansCardHomeScreen/index" />
@@ -50,10 +56,11 @@ export default function RootLayout() {
 
       {/* tools mamas-kit pages outside tabs */}
       <Stack.Screen name="tools/mamas-kit/index" />
-      <Stack.Screen name="tools/features/index" />
+      <Stack.Screen name="tools/features/${featureId}" />
       <Stack.Screen name="tools/due-date-calculator/index" />
       <Stack.Screen name="tools/journal/index" />
       
     </Stack>
+    </SafeAreaProvider>
   );
 }

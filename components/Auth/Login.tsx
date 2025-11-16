@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { View, Text, TextInput, TouchableOpacity, ScrollView, SafeAreaView } from "react-native"
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from "react-native"
 import { useRouter } from "expo-router"
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function Login() {
   const router = useRouter()
@@ -14,7 +15,7 @@ export default function Login() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#e8f5e9" }}>
+    <SafeAreaProvider>
       <ScrollView
         contentContainerStyle={{ flexGrow: 1, justifyContent: "center", paddingHorizontal: 20, paddingVertical: 40 }}
         showsVerticalScrollIndicator={false}
@@ -95,6 +96,6 @@ export default function Login() {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

@@ -1,9 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { View, Text, TextInput, TouchableOpacity, Image, ScrollView, SafeAreaView } from "react-native"
+import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from "react-native"
 import { useRouter } from "expo-router"
-import { authImages } from "@/constants/authImages" // assuming your logos are stored here: profile.googleLogo, profile.appleLogo
+import { authImages } from "@/constants/authImages" 
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function SignUp() {
   const router = useRouter()
@@ -17,7 +18,7 @@ export default function SignUp() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#e8f5e9" }}>
+    <SafeAreaProvider>
       <ScrollView
         contentContainerStyle={{ flexGrow: 1, justifyContent: "center", paddingHorizontal: 20, paddingVertical: 40 }}
         showsVerticalScrollIndicator={false}
@@ -93,6 +94,6 @@ export default function SignUp() {
 
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }

@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { symptoms } from "@/constants/symptoms";
-import { SafeAreaView } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 import { ScrollView, View, Text, Image, TouchableOpacity } from "react-native";
 export default function HomeScreen() {
   const router = useRouter();
@@ -15,8 +15,8 @@ export default function HomeScreen() {
   ];
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView>
+    <SafeAreaProvider style={{ flex: 1 }}>
+      <ScrollView >
 
         <View
           style={{
@@ -82,6 +82,6 @@ export default function HomeScreen() {
         </View>
 
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

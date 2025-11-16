@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useRouter, useLocalSearchParams } from "expo-router";
 
 export default function YourBabyDueDate() {
@@ -13,7 +13,7 @@ export default function YourBabyDueDate() {
   const isValidDate = dueDate && !isNaN(dueDate.getTime());
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
       {/* Header */}
       <View
         style={{
@@ -94,7 +94,7 @@ export default function YourBabyDueDate() {
 
         {/* Recalculate Button */}
         <TouchableOpacity
-          onPress={() => router.push("/due-date-calculator")}
+          onPress={() => router.push("../due-date-calculator")}
           style={{
             backgroundColor: "#20094D",
             borderRadius: 15,
@@ -107,6 +107,6 @@ export default function YourBabyDueDate() {
           </Text>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
